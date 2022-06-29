@@ -22,9 +22,7 @@ const makeGalleri = galleryItems
 
 blokGalleri.insertAdjacentHTML("afterbegin", makeGalleri);
 
-blokGalleri.addEventListener("click", openImg);
-
-function openImg(event) {
+blokGalleri.addEventListener("click", (event) => {
   event.preventDefault();
   const element = event.target.dataset.source;
   //   if (event.target.classList.contains("gallery")) {
@@ -35,4 +33,4 @@ function openImg(event) {
 `);
 
   instance.show();
-}
+});
