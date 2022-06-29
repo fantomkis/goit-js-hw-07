@@ -25,9 +25,7 @@ blokGalleri.insertAdjacentHTML("afterbegin", makeGalleri);
 blokGalleri.addEventListener("click", (event) => {
   event.preventDefault();
   const element = event.target.dataset.source;
-  if (event.target.classList.contains("gallery")) {
-    return;
-  }
+  if (event.target.classList.contains("gallery")) return;
 
   const instance = basicLightbox.create(`
     <img src="${element}" width="800" height="600">
